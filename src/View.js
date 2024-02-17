@@ -37,14 +37,14 @@ const WeatherDetails = ({icon ,temp ,city,country,log,lat,humidity,wind}) =>{
     </div>
     <div className="data-container">
       <div className="element">
-        <img src={Humidity1}alt='huminty icon' className='icon' height={60} width={60} />
+        <img src={Humidity1}alt='huminty icon' className='icon' height={30} width={30} />
         <div className="data">
           <div className="humidity-percent">{humidity}%</div>
           <div className="text">Humidity</div>
         </div>
       </div>
       <div className="element">
-        <img src={winter}alt='huminty icon' className='icon' height={60} width={60} />
+        <img src={winter}alt='huminty icon' className='icon' height={30} width={30} />
         <div className="data">
           <div className="humidity-percent">{wind} km/hr</div>
           <div className="text">wind speed</div>
@@ -145,18 +145,17 @@ function View() {
         <div className="search-icon">
           <img src={SearchIcon} alt='search' onClick={()=>search()}/>
         </div>
-      
-      </div>
-     
+  
+        </div>
                       {loading && <div className='loading-message'>Loading...</div>}
                        { error && <div className="error-message">{error}</div>}
                      {cityNotFound &&  <div className="citynotfound">City Not Found</div>}
                      {!loading && !cityNotFound && <WeatherDetails icon={icon} temp={Temp} 
                       city={city} country={country}
                       lat={lat} log={log}
-                       humidity={humidity} wind={wind}/>}
-    
-                       <h2 class="animate-charcter" >Manikandan U K I @ {(new Date().getFullYear())}  <span></span></h2>
+                       humidity={humidity} wind={wind}/>}   
+    <h2 class="animate-charcter" >Manikandan U K I @ {(new Date().getFullYear())}  <span></span></h2>
+ 
     </div>
     </>
     
